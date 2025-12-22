@@ -1,0 +1,70 @@
+{
+  "images-mujeres": [
+    {
+      "image": "/action-cards/1m.png",
+      "description": "Blusa manga corta con espalda anudable",
+      "price": 179000,
+      "reference": "S12344",
+      "hotspots": [
+        { "x": 40, "y": 30, "item": "sweater" },
+        { "x": 60, "y": 60, "item": "falda 1" }
+      ]
+    },
+    {
+      "image": "/action-cards/2m.png",
+      "description": "Blusa cuello redondo casual",
+      "price": 159000,
+      "reference": "S12345",
+      "hotspots": [
+        { "x": 45, "y": 35, "item": "blusa" }
+      ]
+    },
+    {
+      "image": "/action-cards/3m.png",
+      "description": "Camisa manga larga elegante",
+      "price": 199000,
+      "reference": "S12346",
+      "hotspots": [
+        { "x": 50, "y": 40, "item": "camisa" }
+      ]
+    },
+    {
+      "image": "/action-cards/4m.png",
+      "description": "Top sin mangas verano",
+      "price": 139000,
+      "reference": "S12347",
+      "hotspots": [
+        { "x": 55, "y": 45, "item": "top" }
+      ]
+    }
+  ],
+  "images-hombres": [
+    {
+      "image": "/action-cards/1h.png",
+      "description": "Camisa manga corta algodón",
+      "price": 189000,
+      "reference": "H54321",
+      "hotspots": [
+        { "x": 40, "y": 30, "item": "camisa" }
+      ]
+    },
+    {
+      "image": "/action-cards/2h.png",
+      "description": "Camiseta básica cuello redondo",
+      "price": 99000,
+      "reference": "H54322",
+      "hotspots": [
+        { "x": 45, "y": 35, "item": "camiseta" }
+      ]
+    },
+    {
+      "image": "/action-cards/3h.jpg",
+      "description": "Chaqueta ligera urbana",
+      "price": 249000,
+      "reference": "H54323",
+      "hotspots": [
+        { "x": 50, "y": 40, "item": "chaqueta" }
+      ]
+    }
+  ]
+}

@@ -1,19 +1,17 @@
-import { TikTokFilled, InstagramOutlined } from "@ant-design/icons";
 import Layout from "../../components/Layout";
 import useIsMobile from "../../hooks/useIsMobile";
 import Carousel from "../../components/Carousel";
 import slider from "../../data/slider-web-dynamic-1.json";
 import slider2 from "../../data/slider-web-dynamic-2.json";
 import slider3 from "../../data/slider-web-dynamic-3.json";
+import ActionCards from "../../data/action-cards.json";
 import cards from "../../data/cards.json";
 import ContainerCards from "../../components/ConatinerCardsArrivals";
-import AlbumSession from "../../components/AlbumSession";
-import DynamicCarousel from "../../components/DynamicCarousel/index";
-import ContainerMomentsCards from "../../components/ContainerCardsMoments";
 import TabContext from "../../components/TabContext";
 import GenderCarousel from "../../components/GenderCarousel";
-import "./home.css";
 import GenderCardClothes from "../../components/GenderCardClothes";
+import "./home.css";
+import GenderActionCardClothes from "../../components/GenderActionCardClothes";
 
 function Home() {
   const isMobile = useIsMobile();
@@ -59,7 +57,7 @@ function Home() {
           </section>
 
           <section style={{ marginTop: "2rem" }}>
-            {/* <ActionCards />  */}
+            <GenderActionCardClothes data={ActionCards} isMobile={isMobile}/>
           </section>
 
         </TabContext>

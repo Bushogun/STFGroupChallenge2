@@ -5,7 +5,10 @@ import "./container-cards-arrivals.css";
 interface CardData {
   title: string;
   image: string;
-  hotspots?: { x: number; y: number, item: string }[];
+  description?: string;
+  price?: number;
+  reference?: string;
+  hotspots?: { x: number; y: number; item: string }[];
 }
 
 interface ContainerCardsProps {
@@ -13,8 +16,11 @@ interface ContainerCardsProps {
   isMobile?: boolean;
 }
 
-export default function ContainerCards({ items, isMobile = false }: ContainerCardsProps) {
-    const [current, setCurrent] = useState(0);
+export default function ContainerCards({
+  items,
+  isMobile = false,
+}: ContainerCardsProps) {
+  const [current, setCurrent] = useState(0);
 
   const next = () => {
     if (current < items.length - 1) setCurrent(current + 1);
@@ -24,9 +30,8 @@ export default function ContainerCards({ items, isMobile = false }: ContainerCar
     if (current > 0) setCurrent(current - 1);
   };
 
- return (
+  return (
     <div className={`cards-container ${isMobile ? "mobile" : ""}`}>
-
       {isMobile && current > 0 && (
         <button className="nav-btn left" onClick={prev}>
           ‹
@@ -35,11 +40,7 @@ export default function ContainerCards({ items, isMobile = false }: ContainerCar
 
       <div
         className={isMobile ? "mobile-carousel" : "cards-grid"}
-        style={
-          isMobile
-            ? { transform: `translateX(-${current * 100}%)` }
-            : {}
-        }
+        style={isMobile ? { transform: `translateX(-${current * 100}%)` } : {}}
       >
         {items.map((item, i) => (
           <div key={i} className={isMobile ? "mobile-item" : ""}>
