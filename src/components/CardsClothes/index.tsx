@@ -6,8 +6,6 @@ interface Props {
   isMobile?: boolean;
 }
 
-
-
 export default function CardClothes({ images }: Props) {
   const [current, setCurrent] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -17,6 +15,7 @@ useEffect(() => {
   window.addEventListener("resize", onResize);
   return () => window.removeEventListener("resize", onResize);
 }, []);
+
   const next = () => {
     if (current < images.length - 1) setCurrent((c) => c + 1);
   };
@@ -25,14 +24,27 @@ useEffect(() => {
     if (current > 0) setCurrent((c) => c - 1);
   };
 
-  return (
-    <div className={`cards-container ${isMobile ? "mobile" : ""}`}>
-      {isMobile && current > 0 && (
-        <button className="nav-btn left" onClick={prev}>
-          ‹
-        </button>
+return (
+  <div className={`cards-container ${isMobile ? "mobile" : ""}`}>
+    {/* VIEWPORT */}
+    <div className="carousel-viewport">
+      {/* OVERLAY */}
+      {isMobile && (
+        <div className="nav-overlay">
+          {current > 0 && (
+            <button className="nav-btn left" onClick={prev}>
+              ‹
+            </button>
+          )}
+          {current < images.length - 1 && (
+            <button className="nav-btn right" onClick={next}>
+              ›
+            </button>
+          )}
+        </div>
       )}
 
+      {/* CARRUSEL */}
       <div
         className={isMobile ? "mobile-carousel" : "cards-grid"}
         style={
@@ -47,12 +59,7 @@ useEffect(() => {
           </div>
         ))}
       </div>
-
-      {isMobile && current < images.length - 1 && (
-        <button className="nav-btn right" onClick={next}>
-          ›
-        </button>
-      )}
     </div>
-  );
+  </div>
+);
 }

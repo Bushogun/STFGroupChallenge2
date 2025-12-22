@@ -1,49 +1,75 @@
+/* CONTENEDOR GENERAL */
 .cards-container {
+  width: 100%;
   margin-top: 70px;
+}
+
+/* ===== MOBILE ===== */
+.cards-container.mobile {
   display: flex;
   justify-content: center;
+}
+
+/* VIEWPORT (ESTO ES LO QUE FALTABA) */
+.carousel-viewport {
   position: relative;
-}
-
-.cards-container.mobile {
-  overflow: hidden;
   width: 100%;
-  height: 650px;
+  max-width: 100vw;
+  height: 500px; /* 🔥 ALTURA REAL */
+  overflow: hidden;
 }
 
+/* CARRUSEL */
+.mobile-carousel {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* ITEM */
+.mobile-item {
+  min-width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGEN MOBILE */
+.mobile-item img {
+  width: 85%;
+  max-width: 466px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ===== DESKTOP ===== */
 .cards-grid {
   display: flex;
   gap: 80px;
-}
-
-.mobile-carousel {
-  position: relative;
-  z-index: 1;
-}
-
-.nav-btn {
-  z-index: 10;
-}
-
-
-.mobile-item {
-  min-width: 100%;
-  display: flex;
   justify-content: center;
 }
 
-.card-clothe img,
-.mobile-item img {
+.card-clothe img {
   width: 466px;
   height: 631px;
   object-fit: cover;
 }
 
+/* ===== OVERLAY ===== */
+.nav-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* BOTONES */
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 9999;
+  pointer-events: auto;
   background: transparent;
   border: none;
   font-size: 50px;
@@ -51,19 +77,9 @@
 }
 
 .nav-btn.left {
-  left: 10px;
+  left: 0px !important;
 }
 
 .nav-btn.right {
-  right: 10px;
-}
-
-
-.mobile-carousel {
-  position: relative;
-  z-index: 1;
-}
-
-.nav-btn {
-  z-index: 10;
+  right: 0px !important;
 }

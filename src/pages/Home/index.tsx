@@ -6,12 +6,11 @@ import slider2 from "../../data/slider-web-dynamic-2.json";
 import slider3 from "../../data/slider-web-dynamic-3.json";
 import ActionCards from "../../data/action-cards.json";
 import cards from "../../data/cards.json";
-import ContainerCards from "../../components/ConatinerCardsArrivals";
 import TabContext from "../../components/TabContext";
 import GenderCarousel from "../../components/GenderCarousel";
 import GenderCardClothes from "../../components/GenderCardClothes";
-import "./home.css";
 import GenderActionCardClothes from "../../components/GenderActionCardClothes";
+import "./home.css";
 
 function Home() {
   const isMobile = useIsMobile();
