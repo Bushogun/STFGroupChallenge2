@@ -5,6 +5,7 @@ import Carousel from "../../components/Carousel";
 import slider from "../../data/slider-web-dynamic-1.json";
 import slider2 from "../../data/slider-web-dynamic-2.json";
 import slider3 from "../../data/slider-web-dynamic-3.json";
+import cards from "../../data/cards.json";
 import ContainerCards from "../../components/ConatinerCardsArrivals";
 import AlbumSession from "../../components/AlbumSession";
 import DynamicCarousel from "../../components/DynamicCarousel/index";
@@ -12,6 +13,7 @@ import ContainerMomentsCards from "../../components/ContainerCardsMoments";
 import TabContext from "../../components/TabContext";
 import GenderCarousel from "../../components/GenderCarousel";
 import "./home.css";
+import GenderCardClothes from "../../components/GenderCardClothes";
 
 function Home() {
   const isMobile = useIsMobile();
@@ -44,22 +46,22 @@ function Home() {
         <TabContext>
 
           <section style={{ marginTop: "2rem" }}>
-            {/* <Cards  */}
+            <GenderCardClothes data={cards} isMobile={isMobile} />
           </section>
 
           <section style={{ marginTop: "2rem" }}>
             <GenderCarousel
               data={slider3}
               isMobile={isMobile}
-              showArrows={false}
+              showArrows={true}
               showDoks={false}
             />
           </section>
 
           <section style={{ marginTop: "2rem" }}>
-            {/* <Cards  */}
+            {/* <ActionCards />  */}
           </section>
-          
+
         </TabContext>
       </section>
     </Layout>

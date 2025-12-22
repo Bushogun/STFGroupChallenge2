@@ -1,0 +1,14 @@
+.card-clothes {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-clothe {
+  width: 466;
+  height: 631;
+  top: 2530px;
+  left: 190px;
+  opacity: 1;
+  gap: 80px;
+}
