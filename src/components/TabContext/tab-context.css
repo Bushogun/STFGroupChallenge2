@@ -19,3 +19,9 @@
 .tabs button.active {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .tabs button {
+    width: 10%;
+  }
+}

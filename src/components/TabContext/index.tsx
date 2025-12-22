@@ -4,6 +4,7 @@ import "./tab-context.css";
 type Gender = "mujeres" | "hombres";
 
 interface TabContextType {
+  ismobile?: boolean;
   gender: Gender;
   setGender: (g: Gender) => void;
 }

@@ -41,7 +41,7 @@ function Home() {
       </section>
 
       <section style={{ marginTop: "2rem" }}>
-        <TabContext>
+        <TabContext isMobile={isMobile} >
 
           <section style={{ marginTop: "2rem" }}>
             <GenderCardClothes data={cards} isMobile={isMobile} />
