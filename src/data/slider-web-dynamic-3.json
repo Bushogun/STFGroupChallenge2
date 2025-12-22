@@ -1,0 +1,12 @@
+{
+  "images-mujeres": [
+    "/slider-web-dynamic-3/1m.png",
+    "/slider-web-dynamic-3/2m.png",
+    "/slider-web-dynamic-3/3m.png",
+    "/slider-web-dynamic-3/4m.png"
+  ],
+  "images-hombres": [
+    "/slider-web-dynamic-3/1h.png",
+    "/slider-web-dynamic-3/2h.png"
+  ]
+}

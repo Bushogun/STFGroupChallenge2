@@ -1,0 +1,20 @@
+{
+  "slides": [
+    {
+      "title": "JEANS",
+      "image": "/slider-web-dynamic-1/1.png"
+    },
+    {
+      "title": "PANTS",
+      "image": "/slider-web-dynamic-1/2.png"
+    },
+    {
+      "title": "COATS",
+      "image": "/slider-web-dynamic-1/3.png"
+    },
+    {
+      "title": "BOOTS",
+      "image": "/slider-web-dynamic-1/4.png"
+    }
+  ]
+}

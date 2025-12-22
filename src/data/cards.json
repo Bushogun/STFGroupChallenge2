@@ -1,0 +1,12 @@
+{
+  "images-mujeres": [
+    "/cards/1m.png",
+    "/cards/2m.png",
+    "/cards/3m.png"
+  ],
+  "images-hombres": [
+    "/cards/1h.png",
+    "/cards/2h.png",
+    "/cards/3h.gif"
+  ]
+}
