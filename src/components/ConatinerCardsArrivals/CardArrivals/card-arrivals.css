@@ -9,6 +9,10 @@
     width: 364px;
     height: 538px;
     overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
 }
 
 .card-image {
@@ -21,20 +25,13 @@
 .hotspot {
     position: absolute;
     align-content: center;
-    padding-left: 3px;
-    width: 18px;
-    height: 18px;
-    font-size: 12px;
-    background-color: #4C2B08;
+    font-size: 20px;
+    background-color: transparent;
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
     transform: translate(-50%, -50%);
     transition: 0.2s;
-}
-
-.hotspot:hover {
-    transform: translate(-50%, -50%) scale(1.2);
 }
 
 .card-body {
@@ -43,18 +40,36 @@
 }
 
 .buy-btn {
+position: absolute;
+margin-bottom: 40px;
+    display: flex;
     width: 137px;
-    font-family: Playfair;
     font-size: 18px;
     font-weight: 100;
-    background: #4C2B08;
-    color: white;
+    background: #D9D9D9;
+    color: black;
     padding: 5px;
-    border: none;
+    border-style: solid;
+    border-color: black;
     cursor: pointer;
-    margin-top: 8px;
+    flex-flow: column-reverse;
 }
 
 .buy-btn:hover {
     background: #2e1a04;
+}
+
+.size-wrapper {
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.footer-card-title{
+    font-family: "Inter", sans-serif;
+    padding-bottom: 15px;
+}
+.footer-card-price{
+    font-family: "Inter", sans-serif;
+    padding-bottom: 15px;
 }

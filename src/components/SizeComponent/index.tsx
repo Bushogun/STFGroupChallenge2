@@ -28,10 +28,12 @@ export default function SizeComponent({
   return (
     <div className="size-container">
       <div className="size-container-flex">
-      <div className="title-size">Selecciona tu talla</div>
+      <div className="title-size"></div>
       <div className="subtitle-size">{spot.item}</div>
+      <div className="subtitle-size">Ref: DF43839</div>
+
         <div className="size-chart">
-          {sizes.map((size) => (
+          {/* {sizes.map((size) => (
             <button
               key={size}
               className={`size-btn ${selectedSize === size ? "active" : ""}`}
@@ -39,17 +41,11 @@ export default function SizeComponent({
             >
               {size}
             </button>
-          ))}
+          ))} */}
         </div>
       </div>
-      <div className="blankspace">&nbsp;</div>
+      {/* <div className="blankspace">&nbsp;</div> */}
 
-      <div className="actions" onClick={handleConfirm}>
-        <ShoppingOutlined />
-        <div>
-          Añadir
-          </div>
-      </div>
     </div>
   );
 }

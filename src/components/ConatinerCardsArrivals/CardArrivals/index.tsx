@@ -2,6 +2,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import "./card-arrivals.css";
 import { useState } from "react";
 import SizeComponent from "../../SizeComponent";
+import { BagAddOutline } from "../../../assets/bagAdd";
 
 interface Hotspot {
   x: number;
@@ -15,9 +16,13 @@ interface CardProps {
   hotspots?: Hotspot[];
 }
 
-export default function CardArrivals({ title, image, hotspots = [] }: CardProps) {
+export default function CardArrivals({
+  title,
+  image,
+  hotspots = [],
+}: CardProps) {
   const [selectedSpot, setSelectedSpot] = useState<Hotspot | null>(null);
-  
+
   const handleBuy = () => {
     console.log(`Comprar: ${title}`);
   };
@@ -30,6 +35,9 @@ export default function CardArrivals({ title, image, hotspots = [] }: CardProps)
   return (
     <div className="card">
       <div className="card-image-container">
+        <button className="buy-btn" onClick={handleBuy}>
+          Comprar
+        </button>
         <img src={image} className="card-image" alt={title} />
 
         {hotspots.map((spot, index) => (
@@ -38,30 +46,34 @@ export default function CardArrivals({ title, image, hotspots = [] }: CardProps)
             className="hotspot"
             style={{
               left: `${spot.x}%`,
-              top: `${spot.y}%`
+              top: `${spot.y}%`,
             }}
             onClick={() => handleAddToCart(spot)}
           >
-            <PlusOutlined />
+            <BagAddOutline />
           </div>
         ))}
-        
-      {selectedSpot && (
-        <SizeComponent
-          spot={selectedSpot}
-          onClose={() => setSelectedSpot(null)}
-          onSelectSize={(size) => {
-            console.log("Item:", selectedSpot.item, "Talla:", size);
-          }}
-        />
-      )}
-      </div>
 
-      <div className="card-body">
-        <button className="buy-btn" onClick={handleBuy}>
-          COMPRAR
-        </button>
+        {selectedSpot && (
+          <div
+            className="size-wrapper"
+            style={{
+              left: `${selectedSpot.x}%`,
+              top: `${selectedSpot.y + 5}%`, // un poco más abajo
+            }}
+          >
+            <SizeComponent
+              spot={selectedSpot}
+              onClose={() => setSelectedSpot(null)}
+              onSelectSize={(size) => {
+                console.log("Item:", selectedSpot.item, "Talla:", size);
+              }}
+            />
+          </div>
+        )}
       </div>
+      <div className="footer-card-title">Blusa manga corta espalda de anudar</div>
+      <div className="footer-card-price">$ 279.900</div>
     </div>
   );
 }
