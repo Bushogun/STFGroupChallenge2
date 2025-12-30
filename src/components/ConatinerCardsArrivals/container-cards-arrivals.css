@@ -72,11 +72,11 @@
 
 @media (max-width: 768px) {
   .card {
+    text-align: center;
     width: 107vw;
   }
 
   .card-image-container {
-    width: 118vw;
     height: 450px;
     display: inline-flex;
   }
